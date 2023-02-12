@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import * as tf from '@tensorflow/tfjs';
 
 async function loadModel() {
-   const model = await tf.loadLayersModel('./model/model.json');
+   const model = await tf.loadLayersModel('http://192.168.1.100:8080/model.json');
   console.log('Model loaded.');
   return model;
 }
